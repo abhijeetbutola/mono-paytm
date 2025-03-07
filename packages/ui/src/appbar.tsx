@@ -1,13 +1,14 @@
 import { Button } from "./button";
+import { signIn, signOut } from "next-auth/react";
 
-interface AppbarProps {
+type AppbarProps = {
   user?: {
     name?: string | null;
   };
   // TODO: can u figure out what the type should be here?
-  onSignin: any;
-  onSignout: any;
-}
+  onSignin: typeof signIn;
+  onSignout: typeof signOut;
+};
 
 export const Appbar = ({ user, onSignin, onSignout }: AppbarProps) => {
   return (
