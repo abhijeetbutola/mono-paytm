@@ -11,10 +11,14 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.6.0",
+    "@repo/db": "*",
     "@repo/ui": "*",
     "next": "^15.2.1",
+    "next-transpile-modules": "^10.0.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^15.2.1",

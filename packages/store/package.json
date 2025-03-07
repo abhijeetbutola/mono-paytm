@@ -1,0 +1,20 @@
+{
+  "name": "@repo/store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.6.0",
+    "react-redux": "^9.2.0"
+  },
+  "exports": {
+    "./store": "./src/index.ts",
+    "./hooks": "./src/hooks.ts"
+  }
+}
