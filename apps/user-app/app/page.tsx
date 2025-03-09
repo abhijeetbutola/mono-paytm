@@ -1,10 +1,12 @@
-"use client";
-import { Card } from "@repo/ui/card";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import { authOptions } from "./lib/auth";
 
-export default function Page() {
-  return (
-    <div>
-      <Card title="Hello">What is going on</Card>
-    </div>
-  );
+export default async function Page() {
+  const session = await getServerSession(authOptions);
+  if (session?.user) {
+    redirect("/dashboard");
+  } else {
+    redirect("/api/auth/signin");
+  }
 }
