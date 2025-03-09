@@ -5,7 +5,6 @@ type AppbarProps = {
   user?: {
     name?: string | null;
   };
-  // TODO: can u figure out what the type should be here?
   onSignin: typeof signIn;
   onSignout: typeof signOut;
 };

@@ -1,0 +1,26 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "root"
+      }
+    ],
+    "declaration": false,
+    "declarationMap": false,
+    "emitDeclarationOnly": false,
+    "noEmit": true,
+    "paths": {
+      "@repo/store/*": ["../../packages/store/src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./types/*"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -3,7 +3,7 @@ import db from "@repo/db/client";
 
 const app = express();
 
-app.post("/", async (req, res) => {
+app.post("/hdfcWebhook", async (req, res) => {
   // TODO: Add zod validation here
   // TODO: Check if this request actually came from hdfc bank, use a webhook secret here
   const paymentInformation = {

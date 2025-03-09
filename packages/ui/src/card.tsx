@@ -1,19 +1,16 @@
-import { type ReactNode } from "react";
+import React from "react";
 
 export function Card({
   title,
   children,
-  href,
 }: {
   title: string;
-  children: ReactNode;
-  href?: string;
+  children?: React.ReactNode;
 }) {
   return (
-    <div>
-      <p className="text-3xl">{title}</p>
-      <p>{children}</p>
-      <p>{href}</p>
+    <div className="border p-4">
+      <h1 className="text-xl border-b pb-2">{title}</h1>
+      <div>{children}</div>
     </div>
   );
 }
