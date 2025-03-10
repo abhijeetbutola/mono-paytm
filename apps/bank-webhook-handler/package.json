@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "npx esbuild ./src/index.ts --bundle --platform=node --outfile=dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "npm run build && npm run start"
+  },
   "dependencies": {
     "@repo/ui": "*",
+    "@repo/db": "*",
     "@types/express": "^5.0.0",
     "esbuild": "^0.25.0",
     "express": "^4.21.2"

@@ -7,9 +7,9 @@ import prisma from "@repo/db/client";
 
 async function getBalance() {
   const session = await getServerSession(authOptions);
-  const balance = await prisma.balance.findFirst({
+  const balance = await prisma.balance.findUnique({
     where: {
-      userId: Number(session?.user?.id),
+      userId: Number(session?.user.id),
     },
   });
   return {

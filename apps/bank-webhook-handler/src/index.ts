@@ -2,10 +2,12 @@ import express from "express";
 import db from "@repo/db/client";
 
 const app = express();
+app.use(express.json());
 
 app.post("/hdfcWebhook", async (req, res) => {
   // TODO: Add zod validation here
   // TODO: Check if this request actually came from hdfc bank, use a webhook secret here
+  // console.log(req.body.token, typeof req.body.token);
   const paymentInformation = {
     token: req.body.token,
     userId: req.body.user_identifier,
@@ -46,4 +48,6 @@ app.post("/hdfcWebhook", async (req, res) => {
   }
 });
 
-app.listen(3003);
+app.listen(3003, () => {
+  console.log(`Server listening on PORT: ${3003}`);
+});
